@@ -24,7 +24,12 @@
           </svg>
         </span>
       </h1>
-      <p>{{element.description}}</p>
+
+      <!-- <p>{{element.description}}</p> -->
+      <div id="app" class="p">
+        <div v-html="vueHtml"></div>
+      </div>
+
       <button>Read More</button>
       <label for="hart">
         <svg
@@ -40,7 +45,7 @@
           />
         </svg>
       </label>
-      <input id="hart" type="checkbox" />
+      <input id="hart" type="radio" />
     </div>
   </div>
 </template>
@@ -52,6 +57,11 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  data: function () {
+    return {
+      vueHtml: this.element.description,
+    };
   },
 };
 </script>
@@ -80,10 +90,10 @@ export default {
     margin-left: 22px;
     font-size: 17px;
   }
-  p {
+  .p {
     width: 400px;
-    height: 40px;
-    margin: 4px 0px 0px 0px;
+    height: 55px;
+    margin: -7px 0px 0px 0px;
     overflow: hidden;
   }
   button {

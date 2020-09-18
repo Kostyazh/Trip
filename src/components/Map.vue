@@ -2,6 +2,7 @@
 <template>
   <div id="apps">
     <div class="documents" v-if="!isShow1" id="map">
+      {{element[0].show_on_map}}
       <button v-on:click="isShowText">Hide The Map</button>
     </div>
     <div class="market" v-if="isShow2" id="map2">
@@ -12,6 +13,12 @@
 
 <script>
 export default {
+  props: {
+    element: {
+      type: Object,
+      required: true,
+    },
+  },
   el: "#apps",
   data: function () {
     return {

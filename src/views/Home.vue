@@ -7,7 +7,7 @@
         <Day v-bind:element="element" />
         <Description v-bind:element="element" />
       </div>
-      <Map />
+      <Map v-bind:element="element" />
     </div>
     <div class="container">
       <router-view />

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Day {{element.day_order}}</h1>
+    <h1>Day {{element[1].day_order}}</h1>
   </div>
 </template>
 
