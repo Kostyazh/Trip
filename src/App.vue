@@ -1,20 +1,15 @@
 <template>
   <div id="app">
-    <!-- <div class="wrap">
-      <div class="left">
-        <Navbar />
-      </div>
-      <Map />
-    </div>-->
     <div class="container">
       <router-view />
     </div>
   </div>
 </template>
 
-<script>
-import Navbar from "@/components/Navbar";
+<script >
 import Map from "@/components/Map";
+import Navbar from "@/components/Navbar";
+
 export default {
   components: { Navbar, Map },
 };

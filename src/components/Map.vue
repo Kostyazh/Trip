@@ -1,25 +1,31 @@
 
 <template>
-  <div class="container">
-    <div id="map">
-      <button>
-        <!-- <button v-on:click="visible=!visible"> -->
-        Hide The Map
-        <!-- {{visible?'Hide The Map':'The Map'}} -->
-        <span>>></span>
-      </button>
+  <div id="apps">
+    <div class="documents" v-if="!isShow1" id="map">
+      <button v-on:click="isShowText">Hide The Map</button>
+    </div>
+    <div class="market" v-if="isShow2" id="map2">
+      <button v-on:click="isShowText">The Map</button>
     </div>
   </div>
 </template>
 
 <script>
-// const app = new Vue({
-//   el: "#map",
-//   data: {
-//     visible: true,
-//   },
-// });
-//  --Vue undefined--
+export default {
+  el: "#apps",
+  data: function () {
+    return {
+      isShow1: false,
+      isShow2: false,
+    };
+  },
+  methods: {
+    isShowText() {
+      this.isShow1 = !this.isShow1;
+      this.isShow2 = !this.isShow2;
+    },
+  },
+};
 </script>
 
 
@@ -31,6 +37,14 @@
   width: 509px;
   height: 109vh;
   background-color: rgb(238, 238, 238);
+}
+#map2 {
+  position: relative;
+  justify-content: center;
+  margin: 0 10px 10px 30px;
+  width: 509px;
+  height: 109vh;
+  background-color: none;
 }
 button {
   position: absolute;
