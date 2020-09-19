@@ -31,7 +31,12 @@
       </div>
 
       <button>Read More</button>
-      <label for="hart">
+      <div class="heart">
+        <vue-star class="hart" animate="animated bounceIn" color="#F05654">
+          <b slot="icon" class="fa fa-heart">&#10084;</b>
+        </vue-star>
+      </div>
+      <!-- <label for="heart">
         <svg
           width="20"
           height="20"
@@ -44,14 +49,26 @@
             fill="#333333"
           />
         </svg>
-      </label>
-      <input id="hart" type="radio" />
+      </label>-->
+      <!-- <input id="hart" type="radio" /> -->
+      <!-- <svg width="640" height="480" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
+        <g id="layer1">
+          <path
+            id="svg_2"
+            d="m219.28949,21.827393c-66.240005,0 -119.999954,53.76001 -119.999954,120c0,134.755524 135.933151,170.08728 228.562454,303.308044c87.574219,-132.403381 228.5625,-172.854584 228.5625,-303.308044c0,-66.23999 -53.759888,-120 -120,-120c-48.047913,0 -89.401611,28.370422 -108.5625,69.1875c-19.160797,-40.817078 -60.514496,-69.1875 -108.5625,-69.1875z"
+          />
+        </g>
+      </svg>-->
     </div>
   </div>
 </template>
 
 <script>
+import VueStar from "vue-star";
 export default {
+  components: {
+    VueStar,
+  },
   props: {
     element: {
       type: Object,
@@ -104,9 +121,6 @@ export default {
     padding: 10px 50px 10px 50px;
     margin: 24px 30px 0px 0px;
   }
-  .heart {
-    font-size: 1.9rem;
-  }
 }
 img {
   border: 1px solid slategray;
@@ -134,5 +148,27 @@ input[type="checkbox"] {
   -o-appearance: none;
   appearance: none;
   outline: none;
+}
+//heart 2
+// svg {
+//   display: block;
+//   width: 50px;
+//   height: auto;
+// }
+
+// #svg_2 {
+//   fill: transparent;
+//   stroke: #000;
+//   stroke-width: 6px;
+//   cursor: pointer;
+//   transition: fill 0.3s;
+// }
+// #svg_2.filled {
+//   fill: #000;
+// }
+.heart {
+  display: block;
+  margin-top: -70px;
+  margin-left: 170px;
 }
 </style>
