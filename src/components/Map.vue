@@ -42,7 +42,7 @@ export default {
   justify-content: center;
   margin: 0 10px 10px 30px;
   width: 509px;
-  height: 109vh;
+  height: 116vh;
   background-color: rgb(238, 238, 238);
 }
 #map2 {
@@ -50,7 +50,7 @@ export default {
   justify-content: center;
   margin: 0 10px 10px 30px;
   width: 509px;
-  height: 109vh;
+  height: 116vh;
   background-color: none;
 }
 button {
