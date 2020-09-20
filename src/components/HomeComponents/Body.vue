@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <img v-bind:src="element.images[0].path" alt="img" />
+    <img
+      v-bind:src="element.images[0].path"
+      onerror="this.src='https://allauthor.com/img/20170730211046.png'"
+      alt="img"
+    />
     <div class="found">
       <h1>
         {{element.category.title}}
@@ -123,10 +127,9 @@ export default {
   }
 }
 img {
-  border: 1px solid slategray;
   height: 150px;
   width: 150px;
-  background-color: rgb(238, 238, 238);
+  // background: url("../src/img/NotFound.png");
   margin: 25px 30px 40px 16px;
 }
 label {
@@ -170,5 +173,8 @@ input[type="checkbox"] {
   display: block;
   margin-top: -70px;
   margin-left: 170px;
+}
+b {
+  cursor: pointer;
 }
 </style>

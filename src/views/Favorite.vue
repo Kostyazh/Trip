@@ -3,7 +3,7 @@
     <div class="wrap">
       <div class="left">
         <Navbar />
-        <FilterHome />
+        <Filters />
         <Day v-bind:element="element" />
         <Description v-bind:element="element" />
       </div>
@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import Navbar from "@/components/Navbar";
-import Map from "@/components/Map";
-import Description from "@/components/Description";
-import FilterHome from "@/components/FilterHome";
+import Navbar from "@/components/FavoriteComponents/Navbar";
+import Map from "@/components/FavoriteComponents/Map";
+import Description from "@/components/FavoriteComponents/Description";
+import Filters from "@/components/FavoriteComponents/Filters";
 import Day from "@/components/Day";
 const userData = require("../response.json");
 console.log(userData);
@@ -29,7 +29,7 @@ export default {
       element: userData,
     };
   },
-  components: { Navbar, Map, Description, FilterHome, Day },
+  components: { Navbar, Map, Description, Filters, Day },
 };
 </script>
 

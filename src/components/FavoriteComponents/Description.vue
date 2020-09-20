@@ -1,13 +1,13 @@
 <template>
   <div class="container_body">
-    <Body v-for="element in element.slice(0, 3)" v-if v-bind:element="element" />
+    <Body v-for="element in element.slice(0, 6)" v-bind:element="element" />
   </div>
 </template>
 
 <script>
 // const userData = require("../response.json");
 // console.log(userData);
-import Body from "@/components/Body";
+import Body from "@/components/FavoriteComponents/Body";
 
 export default {
   props: ["element"],
@@ -19,7 +19,10 @@ export default {
 
 <style lang="scss" scoped>
 .container_body {
-  width: 710px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1000px;
   height: 200px;
 }
 </style>
